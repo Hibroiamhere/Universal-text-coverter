@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universal Converter</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: 'rgba(var(--primary-color), <alpha-value>)',
+            secondary: 'rgba(var(--secondary-color), <alpha-value>)',
+            accent: 'rgba(var(--accent-color), <alpha-value>)',
+            neutral: 'rgba(var(--neutral-color), <alpha-value>)',
+            'base-100': 'rgba(var(--base-100-color), <alpha-value>)',
+            info: 'rgba(var(--info-color), <alpha-value>)',
+            success: 'rgba(var(--success-color), <alpha-value>)',
+            warning: 'rgba(var(--warning-color), <alpha-value>)',
+            error: 'rgba(var(--error-color), <alpha-value>)',
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      :root {
+        --primary-color: 94 114 228; /* Indigo */
+        --secondary-color: 247 107 107; /* Soft Red */
+        --accent-color: 251 146 60; /* Orange */
+        --neutral-color: 75 85 99; /* Gray */
+        --base-100-color: 243 244 246; /* Light Gray */
+        --info-color: 59 130 246; /* Blue */
+        --success-color: 16 185 129; /* Green */
+        --warning-color: 245 158 11; /* Amber */
+        --error-color: 239 68 68; /* Red */
+      }
+      body {
+        @apply bg-base-100 text-neutral font-sans;
+      }
+    }
+  </style>
+  <!-- pdf.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" integrity="sha512-qHjHjC4MSH3/H2L0c2K2ZzP11X79jYyJpEIPyXyLzOgkL0T22yD1hD3/V1TCqg4Pz0U7V+q7Lg/pXnL8uC3fQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js" integrity="sha512-sM4J8MBBCjGMCGVEB7jLz7ZqS4F7zifI5ZQlJd0/Z4Lg90+U/xHwKxyZpbKkMshPbP3vB3P9uYyJt4V2xig9UQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- FileSaver.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gBMhV5fjzFvrXWnbLjs1VMFo1V2kB+R//IOnFHAgjwxoRQKHHh2K0TgoP+U_1mG7jBfM_pY0LM12g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
+    

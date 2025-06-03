@@ -1,0 +1,5 @@
+{
+  "name": "Universal Converter",
+  "description": "A versatile web application for converting files and text, including PDF to Text, image compression, and text case transformations. All conversions are processed client-side for privacy and speed.",
+  "requestFramePermissions": []
+}
